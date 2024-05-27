@@ -1,0 +1,17 @@
+plugins:
+    kotlin("plugin.serialization") version "2.0.0"
+    id("kotlin-kapt")
+
+dependencies:
+ val room_version = "2.6.1"
+
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+    kapt("androidx.room:room-compiler:$room_version")
+
+    val nav_version = "2.7.7"
+
+    // Kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
